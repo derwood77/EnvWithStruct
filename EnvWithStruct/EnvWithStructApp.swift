@@ -7,12 +7,20 @@
 
 import SwiftUI
 
+
+
+import SwiftUI
+
+
 @main
 struct EnvWithStructApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-               
+            // We use the wrapper view here to set the environment.
+            // All the content inside will inherit these values.
+            EnvironmentWrapperView {
+                ContentView()
+            }
         }
     }
 }
